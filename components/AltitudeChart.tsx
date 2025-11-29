@@ -13,11 +13,11 @@ const AltitudeChart: React.FC = () => {
     if (match) {
       alt = parseInt(match[1]);
     } else {
-        // Fallback logic if regex fails, though data should be consistent now
+        // Fallback logic
         if (d.location_end.includes("拉萨")) alt = 3650;
         else if (d.location_end.includes("林芝")) alt = 2900;
         else if (d.location_end.includes("日喀则")) alt = 3800;
-        else if (d.location_end.includes("珠峰")) alt = 4200; // Basum village
+        else if (d.location_end.includes("珠峰")) alt = 4200;
         else if (d.location_end.includes("广州")) alt = 50;
     }
 

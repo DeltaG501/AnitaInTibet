@@ -56,7 +56,7 @@ export const ITINERARY_DATA: DayItinerary[] = [
     highlights: ["机场提车", "酒店修整", "清淡饮食"],
     note: "切勿兴奋乱跑，就在酒店点外卖或吃清淡的。",
     weather: { temp: "-3°C ~ 11°C", condition: "Sunny", wind: "微风" },
-    description: "14:40落地。川航联程到达。提车后直奔酒店。第一晚最关键，就在酒店休息，为后续行程蓄力。"
+    description: "14:40落地。川航联程到达。提车后直奔酒店。第一晚最关键，千万别兴奋乱跑，就在酒店点外卖或吃清淡的，为后续行程蓄力。"
   },
   {
     day: 2,
