@@ -8,6 +8,14 @@ interface MapWidgetProps {
 }
 
 const MapWidget: React.FC<MapWidgetProps> = ({ from, to, distance }) => {
+  
+  const handleNavigation = () => {
+    // Construct Amap direction URL
+    // Web version: https://www.amap.com/dir?from[name]=start&to[name]=end
+    const url = `https://www.amap.com/dir?from[name]=${encodeURIComponent(from)}&to[name]=${encodeURIComponent(to)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden relative group">
       {/* Header mimics map app UI */}
@@ -44,8 +52,12 @@ const MapWidget: React.FC<MapWidgetProps> = ({ from, to, distance }) => {
       </div>
       
       <div className="px-3 py-2 bg-blue-50 text-[10px] text-blue-700 flex items-center justify-between">
-        <span>推荐路线: G318国道优先</span>
-        <button className="px-2 py-0.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+        <span>推荐路线: G318国道/高速优先</span>
+        <button 
+            onClick={handleNavigation}
+            className="px-2 py-0.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors flex items-center gap-1"
+        >
+            <IconNavigation className="w-3 h-3" />
             开始导航
         </button>
       </div>
